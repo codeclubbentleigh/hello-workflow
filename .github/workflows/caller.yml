@@ -19,5 +19,7 @@ jobs:
       config-path: .github/labeler.yml      
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
+    inputs:
+      name: "test"
 # comment
 # comment
