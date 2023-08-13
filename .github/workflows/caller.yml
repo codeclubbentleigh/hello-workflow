@@ -5,6 +5,10 @@ on:
     branches:
       - dev
   workflow_dispatch:
+    inputs:
+      deploy_target:
+        required: true
+        type: string
 
 jobs:
   #call-workflow:
@@ -17,7 +21,7 @@ jobs:
     uses: codeclubbentleigh/hello-workflow/.github/workflows/called.yml@main
     with:      
       config-path: .github/labeler.yml  
-      name-env: ${{"name-env"}}
+      # name-env: ${{"name-env"}}
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 # comment
