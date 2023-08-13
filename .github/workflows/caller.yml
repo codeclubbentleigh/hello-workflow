@@ -16,8 +16,7 @@ jobs:
       pull-requests: write
     uses: codeclubbentleigh/hello-workflow/.github/workflows/called.yml@main
     with:      
-      config-path: .github/labeler.yml
-      name: "test"
+      config-path: .github/labeler.yml      
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
 # comment
